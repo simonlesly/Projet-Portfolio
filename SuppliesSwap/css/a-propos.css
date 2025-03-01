@@ -1,0 +1,87 @@
+.a-propos, .contact {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+}
+  
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #251e82;
+}
+  
+  
+.a-propos {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+}
+  
+.a-propos p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+  
+  
+.contact {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+  
+
+.contact .form-group {
+    margin-bottom: 15px;
+}
+  
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #251e82;
+}
+  
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+  
+.contact button {
+    background-color: #251e82;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.contact button:hover {
+    background-color: #1e1a6e;
+}
+  
+@media (max-width: 768px) {
+    section {
+      padding: 10px;
+    }
+  
+    .a-propos p,
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
+      font-size: 14px;
+    }
+}  

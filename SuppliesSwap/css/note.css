@@ -1,0 +1,9 @@
+.notation span {
+    font-size: 2em;
+    cursor: pointer;
+    color: gold;
+  }
+  .notation span:hover,
+  .notation span:hover ~ span {
+    color: lightgray;
+  }

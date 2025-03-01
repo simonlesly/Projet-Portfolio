@@ -1,0 +1,66 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh; 
+    background-color: #f3f4f6; 
+}
+
+/* Conteneur du formulaire */
+#formulaire-paiement {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Style des champs de saisie */
+#formulaire-paiement div {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+button#soumettre {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#soumettre:hover {
+    background-color: #3b3ad6;
+}
+
+button#soumettre:active {
+    background-color: #2a2a9f;
+}
+
+
+#erreurs-carte {
+    color: #e63946;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+   
+
+    #formulaire-paiement {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,105 @@
+/* Style général pour la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center;     /* Centre le contenu verticalement */
+    min-height: 100vh;      /* Remplit la hauteur de la fenêtre */
+}
+
+/* Style pour le panier */
+.panier {
+    width: 90%;             /* Réduit la largeur du cadre */
+    max-width: 400px;      /* Limite la largeur à 400px */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;      /* Centre le texte à l'intérieur du cadre */
+    margin: 20px auto;      /* Ajoute une marge auto pour centrer le cadre */
+}
+
+/* Informations sur l'article */
+.article-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.article-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-prix {
+    font-size: 16px;
+    color: #f44336; /* Couleur rouge pour le prix */
+}
+
+/* Styles pour les boutons */
+.button-container {
+    display: flex;           /* Aligne les boutons horizontalement */
+    justify-content: center; /* Centre les boutons */
+    margin-top: 20px;       /* Ajoute un espacement au-dessus des boutons */
+    gap: 10px;              /* Ajoute un espacement entre les boutons */
+}
+
+input[type="submit"], .annuler {
+    padding: 10px 15px;    /* Ajuste le padding pour les boutons */
+    font-size: 16px;
+    text-align: center;
+    background-color: #f44336; /* Couleur rouge */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Pour le lien "Annuler" */
+}
+
+input[type="submit"]:hover, .annuler:hover {
+    background-color: #d32f2f;
+}
+
+/* Pour un meilleur affichage sur mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .panier {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .article-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type="submit"], .annuler {
+        width: 100%; /* Prend toute la largeur */
+        padding: 12px;
+        margin: 10px 0;
+    }
+}

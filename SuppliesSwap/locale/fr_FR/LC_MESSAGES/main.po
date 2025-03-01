@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fr\n"
+
+msgid "Bienvenue sur Supplies Swap, la plateforme incontournable pour échanger et acquérir des fournitures scolaires de manière simple et efficace au sein du Cégep de Matane !"
+msgstr "Bienvenue sur Supplies Swap, la plateforme incontournable pour échanger et acquérir des fournitures scolaires de manière simple et efficace au sein du Cégep de Matane !"
+
+msgid "Faites partie de cette communauté dynamique qui valorise l'échange et la solidarité étudiante."
+msgstr "Faites partie de cette communauté dynamique qui valorise l'échange et la solidarité étudiante."
+
+msgid "N'hésitez pas à parcourir les différentes pages afin de découvrir tous nos services !"
+msgstr "N'hésitez pas à parcourir les différentes pages afin de découvrir tous nos services !"
+
+msgid "Mathématiques"
+msgstr "Mathématiques"
+
+msgid "Littérature"
+msgstr "Littérature"
+
+msgid "Anglais"
+msgstr "Anglais"
+
+msgid "Physique"
+msgstr "Physique"
+
+msgid "Chimie"
+msgstr "Chimie"
+
+msgid "laissez un commentaire"
+msgstr "laissez un commentaire"
+
+msgid "Modifier"
+msgstr "Modifier"
+
+msgid "Deconnexion"
+msgstr "Déconnexion"
+
+msgid "Produits"
+msgstr "Produits"
+
+msgid "À propos"
+msgstr "À propos"
+
+msgid "Rechercher un produit"
+msgstr "Rechercher un produit"
+
+msgid "Administration"
+msgstr "Administration"
+
+msgid "Ajouter"
+msgstr "Ajouter"
+
+msgid "MON COMPTE"
+msgstr "MON COMPTE"
+
+msgid "À propos de Supplies Swap"
+msgstr "À propos de Supplies Swap"
+
+msgid ""
+"Bienvenue sur Supplies Swap, la plateforme dédiée à l'achat et à la vente de "
+"livres d'occasion pour les étudiants du Québec. Nous facilitons la mise en "
+"relation entre étudiants cherchant à revendre leurs livres scolaires et ceux "
+"qui recherchent des ouvrages à prix réduits. Notre mission est de rendre "
+"l'achat de matériel scolaire plus abordable, tout en favorisant une économie "
+"circulaire entre étudiants. Grâce à notre système simple de création de "
+"compte, vous pouvez rapidement consulter les livres disponibles dans votre "
+"établissement, mettre en vente les vôtres ou entrer en contact avec d'autres "
+"étudiants pour finaliser vos transactions."
+msgstr ""
+"Bienvenue sur Supplies Swap, la plateforme dédiée à l'achat et à la vente de "
+"livres d'occasion pour les étudiants du Québec. Nous facilitons la mise en "
+"relation entre étudiants cherchant à revendre leurs livres scolaires et ceux "
+"qui recherchent des ouvrages à prix réduits. Notre mission est de rendre "
+"l'achat de matériel scolaire plus abordable, tout en favorisant une économie "
+"circulaire entre étudiants. Grâce à notre système simple de création de "
+"compte, vous pouvez rapidement consulter les livres disponibles dans votre "
+"établissement, mettre en vente les vôtres ou entrer en contact avec d'autres "
+"étudiants pour finaliser vos transactions."
+
+msgid "Nom du produit :"
+msgstr "Nom du produit :"
+
+msgid "État du produit :"
+msgstr "État du produit :"
+
+msgid "Cours :"
+msgstr "Cours :"
+
+msgid "Prix :"
+msgstr "Prix :"
+
+msgid "Description :"
+msgstr "Description :"
+
+msgid "Ajouter à la wishlist"
+msgstr "Ajouter à la wishlist"
+
+msgid "Erreur lors de l'envoi de la note"
+msgstr "Erreur lors de l'envoi de la note"
+
+msgid "Ouverture de session"
+msgstr "Ouverture de session"
+
+msgid "Se connecter"
+msgstr "Se connecter"
+
+msgid "Nom d'utilisateur"
+msgstr "Nom d'utilisateur"
+
+msgid "Mot de passe"
+msgstr "Mot de passe"
+
+msgid "Votre nom"
+msgstr "Votre nom"
+
+msgid "Votre prenom"
+msgstr "Votre prénom"
+
+msgid "Courriel"
+msgstr "Courriel"
+
+msgid "Confirmez votre mot de passe"
+msgstr "Confirmez votre mot de passe"
+
+msgid "Créer un compte"
+msgstr "Créer un compte"
+
+msgid "Inscription"
+msgstr "Inscription"
+
+msgid "Nom de famille"
+msgstr "Nom de famille"
+
+msgid "Prénom"
+msgstr "Prénom"
+
+msgid "Au moins 6 caractères"
+msgstr "Au moins 6 caractères"

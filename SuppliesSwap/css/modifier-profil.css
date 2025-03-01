@@ -1,0 +1,85 @@
+#formulaire-modification {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formulaire-modification h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #251e82;
+    margin-bottom: 20px;
+}
+
+.entree-style-texte {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.entree-style-texte input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.entree-style-texte span {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+#formulaire-modification input[type="submit"] {
+    background-color: #251e82;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulaire-modification input[type="submit"]:hover {
+    background-color: #1e1a6e;
+}
+
+#erreur {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#connection {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #251e82;
+}
+
+@media (max-width: 768px) {
+    #formulaire-modification {
+        padding: 15px;
+    }
+
+    #formulaire-modification h2 {
+        font-size: 20px;
+    }
+
+    .entree-style-texte input {
+        font-size: 14px;
+    }
+
+    #formulaire-modification input[type="submit"] {
+        font-size: 14px;
+    }
+}

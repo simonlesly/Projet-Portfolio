@@ -1,0 +1,112 @@
+.contenu{
+    
+    margin-right: 50%;
+    margin-left: 20%;
+    padding: 20px;
+    width: 80rem;
+    display: flex;
+    border: 10px solid #505da2;
+    border-radius: 20px;
+    /*overflow: hidden;*/
+   
+
+}
+
+.image img{
+
+    width: 75%;
+    height: 300px;
+    background: #9dbccb;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    
+    
+}
+
+.text {
+    margin-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    width: 50%;
+    
+   
+}
+.description{
+    padding-bottom: 4rem;
+}
+
+.nom{
+    padding-bottom: 3rem;
+}
+
+.categorie{
+    padding-bottom: 4rem;
+}
+
+.etat{
+    padding-bottom: 3rem;
+}
+
+/* Style du bouton */
+.add-to-wishlist {
+    background-color:  #505da2; /* Couleur de fond violette */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+    transition: background-color 0.3s, transform 0.2s; /* Effet de transition */
+}
+
+/* Effet au survol */
+.add-to-wishlist:hover {
+    background-color:  #6e7fd6; /* Couleur plus claire au survol */
+    transform: scale(1.05); /* Légère animation de mise à l'échelle */
+}
+
+/* Effet au focus */
+.add-to-wishlist:focus {
+    outline: none; /* Supprime la bordure de focus */
+    box-shadow: 0 0 10px #505da2; /* Ajoute un halo autour du bouton */
+}
+
+/* Style du message */
+.wishlist-message {
+    display: none; /* Par défaut, le message est caché */
+    background-color: #28a745; /* Couleur verte pour le succès */
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center; /* Centrer le texte */
+    position: fixed; /* Position fixe pour le message */
+    bottom: 20px; /* Placer le message en bas de la page */
+    left: 50%;
+    transform: translateX(-50%); /* Centrer horizontalement */
+    z-index: 1000; /* S'assurer que le message est visible par-dessus tout */
+}
+.btn-custom {
+    background-color: #505da2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-custom :hover {
+    background-color: #505da2;
+}
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+

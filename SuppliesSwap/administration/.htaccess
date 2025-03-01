@@ -1,0 +1,4 @@
+AuthUserFile "#"
+AuthName ""
+AuthType Basic
+Require valid-user

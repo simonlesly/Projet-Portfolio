@@ -1,0 +1,52 @@
+.contenu{
+    
+    margin-right: 50%;
+    margin-left: 20%;
+    padding: 20px;
+    width: 80rem;
+    display: flex;
+    border: 10px solid #505da2;
+    border-radius: 20px;
+    /*overflow: hidden;*/
+   
+
+}
+
+.image img{
+
+    width: 75%;
+    height: 300px;
+    background: #9dbccb;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    
+    
+}
+
+.text {
+    margin-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    width: 50%;
+    
+   
+}
+.description{
+    padding-bottom: 4rem;
+}
+
+.nom{
+    padding-bottom: 3rem;
+}
+
+.categorie{
+    padding-bottom: 4rem;
+}
+
+.etat{
+    padding-bottom: 3rem;
+}

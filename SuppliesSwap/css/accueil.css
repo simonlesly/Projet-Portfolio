@@ -1,0 +1,122 @@
+
+
+  
+  .catégories {
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille responsive */
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  .catégorie {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .catégorie img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .titre {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .presentation {
+    text-align: center;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    width: 33%; /* Ajuste cette valeur pour modifier la largeur du carrousel */
+    justify-content: center;
+}
+
+.carousel-container {
+    width: 40%; /* Largeur de la zone visible (une seule image) */
+    max-width: 600px; /* Ajustement pour limiter la taille maximale */
+    height: 80%; /* S'adapte à la hauteur de l'image */
+    overflow: hidden;
+    justify-content: center;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Prend la largeur du conteneur */
+}
+
+.carousel-slide img {
+    min-width: 100%; /* Chaque image occupe toute la largeur du conteneur */
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain; /* Empêche la déformation de l'image */
+    max-width: 100%; /* Garantit que les images ne dépassent pas la taille du conteneur */
+}
+
+#prevBtn, #nextBtn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid #666;
+    font-size: 24px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        width: 90%; /* Le carrousel s'adapte à la largeur de l'écran */
+    }
+
+    .carousel-container {
+        width: 100%; /* Le conteneur occupe toute la largeur disponible */
+        max-width: 100%; /* Suppression de la limite de taille pour les petits écrans */
+    }
+
+    #prevBtn, #nextBtn {
+        width: 40px; /* Réduction des boutons sur les petits écrans */
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        width: 100%; /* Le carrousel occupe toute la largeur de l'écran */
+    }
+
+    .carousel-container {
+        width: 100%; /* Utilise toute la largeur disponible */
+        max-width: 100%; /* Suppression de la limite de taille */
+    }
+
+    #prevBtn, #nextBtn {
+        width: 30px; /* Encore plus petits pour les très petits écrans */
+        height: 30px;
+        font-size: 16px;
+    }
+}
+  
+  
+
+  
+  
+
+  

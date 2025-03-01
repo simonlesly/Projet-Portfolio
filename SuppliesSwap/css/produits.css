@@ -1,0 +1,48 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.produit {
+    background-color: rgb(224, 211, 211);
+    border: 1px solid #cf3535;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titre {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.produit img {
+    width: 40%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.etat {
+     font-weight: bold;
+     font-size: 18px; 
+     margin-top: 5px;     
+ }
+
+ .prix {
+    font-weight: bold;
+    margin: 5px;
+ }
+
+.article-{
+    width: 30%;
+    height: 100%;
+    background: #9dbccb;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 70px;
+}
+
+

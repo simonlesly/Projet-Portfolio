@@ -1,0 +1,88 @@
+.btn-commentaire {
+    background-color: #505da2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-commentaire:hover {
+    background-color: #505da2;
+}
+.text-center {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/*#nom-detail {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #251e82;
+}
+
+#commentaireForme {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#commentaireTexte {
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #251e82;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1b1464;
+}
+
+#errorMessage {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+#liste_commentaire {
+    margin-top: 20px;
+}
+
+.commentaire {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.commentaire p {
+    margin: 0;
+    font-size: 14px;
+}
+
+*/

@@ -1,0 +1,110 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #495057;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+/* Conteneur principal de la wishlist */
+.wishlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style des items dans la wishlist */
+.wishlist-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wishlist-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du produit */
+.produit-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Titre et détails du produit */
+.wishlist-item h2 {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.wishlist-item p {
+    font-size: 1em;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Prix */
+.wishlist-item p:last-of-type {
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Bouton de suppression */
+button.remove-from-wishlist {
+    display: inline-block;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button.remove-from-wishlist:hover {
+    background-color: #c82333;
+}
+
+/* Style du message */
+.wishlist-message {
+    display: none; /* Par défaut, le message est caché */
+    background-color: #28a745; /* Couleur verte pour le succès */
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center; /* Centrer le texte */
+    position: fixed; /* Position fixe pour le message */
+    bottom: 20px; /* Placer le message en bas de la page */
+    left: 50%;
+    transform: translateX(-50%); /* Centrer horizontalement */
+    z-index: 1000; /* S'assurer que le message est visible par-dessus tout */
+}
