@@ -1,0 +1,121 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Importation des polices */
+@font-face {
+  font-family: 'Old Japanese'; /* Nouvelle police */
+  src: url('font/Old_Japanese.otf') format('truetype'); /* Chemin vers la nouvelle police */
+}
+
+/* Document
+   ========================================================================== */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Styles globaux
+   ========================================================================== */
+
+body {
+  margin: 0;
+  background-image: url('illustration/temple.jpg'); /* Image de fond */
+  background-repeat: no-repeat; /* Pas de répétition de l'image */
+  background-size: cover; /* Couvre toute la page */
+  background-attachment: fixed; /* Fixe l'image lors du défilement */
+  font-family: 'Old Japanese', sans-serif; /* Utilise Old Japanese comme police principale */
+  color: #000; /* Couleur noire pour le texte */
+  font-weight: normal; /* Épaisseur de police normale */
+  display: flex; /* Utilise flex pour centrer les éléments */
+  min-height: 100vh; /* Hauteur minimale pour le corps */
+}
+
+/* Centrer la page */
+.page {
+  display: flex; /* Utilise flex pour aligner les éléments */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  padding: 5%; /* Espacement autour du contenu */
+  width: 100%; /* Prend toute la largeur */
+  position: relative; /* Position relative pour le contenu centré */
+}
+
+/* Styles de la liste */
+#liste-cadeau {
+  list-style-type: none; /* Supprime les puces de la liste */
+  padding: 20px; /* Ajout d'un padding pour le contenu de la liste */
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc opaque pour la liste */
+  border-radius: 0.5rem; /* Coins arrondis */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre portée */
+  flex: 0 0 auto; /* Ne pas étirer la liste au-delà de sa taille naturelle */
+  width: 80%; /* Largeur de la liste */
+  max-width: 600px; /* Largeur maximale de la liste */
+}
+
+/* Éléments de la liste */
+.liste-cadeau-item {
+  color: #000; /* Couleur du texte en noir */
+  text-transform: capitalize; /* Met en majuscule la première lettre */
+  text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+/* Style des formulaires */
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* Police héritée */
+  font-size: 1.5rem; /* Taille de police augmentée pour les formulaires */
+  margin: 0; /* Suppression de la marge */
+  border: 1px solid #000; /* Bordure noire */
+  border-radius: 0.5rem; /* Bordures arrondies */
+  padding: 1.5rem; /* Espacement augmenté */
+  background-color: #000; /* Couleur noire pour les boutons */
+  color: #000000; /* Texte blanc */
+  width: 100%; /* Largeur complète */
+  box-sizing: border-box; /* Inclut le padding dans la taille */
+}
+
+/* Détails violets remplacés par noir */
+.details {
+  color: #000; /* Couleur noire pour les détails */
+}
+
+/* Autres styles */
+h1 {
+  font-size: 2.5em; /* Taille de h1 */
+  margin: 0.67em 0;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7); /* Ombre claire pour le texte */
+}
+
+hr {
+  border: 1px solid #000; /* Bordure noire pour hr */
+}
+
+a {
+  color: #000; /* Couleur noire pour les liens */
+  text-decoration: none; /* Pas de soulignement par défaut */
+}
+
+a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Interactif
+   ========================================================================== */
+
+details {
+  display: block; /* Affichage pour details */
+}
+
+summary {
+  display: list-item; /* Affichage pour summary */
+}
+
+/* Divers
+   ========================================================================== */
+
+template,
+[hidden] {
+  display: none; /* Masquer template et éléments cachés */
+}
