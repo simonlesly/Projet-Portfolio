@@ -20,7 +20,9 @@ class VueAjouterManga{
         let auteur = document.getElementById('manga-auteur').value;
         let type = document.getElementById('manga-type').value;
         let description = document.getElementById('manga-description').value;
-        
+        let imageURL = document.getElementById('manga-image').files[0] ? URL.createObjectURL(document.getElementById('manga-image').files[0]) : "";
+        let videoURL = document.getElementById('manga-video').value;
+
         this.actionAjouterManga(new Manga(nom,auteur,type,description,null));
         
     }
