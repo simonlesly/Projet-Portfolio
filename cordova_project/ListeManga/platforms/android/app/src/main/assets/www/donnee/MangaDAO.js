@@ -21,8 +21,8 @@ class MangaDAO
                                    this.listeManga[position].auteur,
                                    this.listeManga[position].type,
                                    this.listeManga[position].description,
-                                   this.listeManga[position].id
-                                   this.listeManga[position].imageURL
+                                   this.listeManga[position].id,
+                                   this.listeManga[position].imageURL,
                                    this.listeManga[position].videoURL);
 
             this.listeManga[manga.id] = manga;
