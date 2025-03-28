@@ -21,26 +21,27 @@ class MangaDAO
                                    this.listeManga[position].auteur,
                                    this.listeManga[position].type,
                                    this.listeManga[position].description,
-                                   this.listeManga[position].id);
+                                   this.listeManga[position].id
+                                   this.listeManga[position].imageURL
+                                   this.listeManga[position].videoURL);
 
             this.listeManga[manga.id] = manga;
         }
       return this.listeManga;
     }   
 
-    ajouter(manga)
-    {
-        if(this.listeManga.length > 0) 
+    ajouter(manga) {
+        if (this.listeManga.length > 0)
             manga.id = this.listeManga[this.listeManga.length-1].id + 1;
-        else 
+        else
             manga.id = 0;
 
         this.listeManga[manga.id] = manga;
 
-      
         localStorage['manga'] = JSON.stringify(this.listeManga);
         console.log("JSON.stringify(this.listeManga) : " + JSON.stringify(this.listeManga));
-}
+    }
+
 
 modifier(mangaModifie) {
     
@@ -52,6 +53,8 @@ modifier(mangaModifie) {
         this.listeManga[index].auteur = mangaModifie.auteur;
         this.listeManga[index].type = mangaModifie.type;
         this.listeManga[index].description = mangaModifie.description;
+        this.listeManga[index].imageURL = mangaModifie.imageURL;
+        this.listeManga[index].videoURL= mangaModifie.videoURL;
 
        
         localStorage['manga'] = JSON.stringify(this.listeManga);
