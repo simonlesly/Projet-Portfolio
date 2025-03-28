@@ -24,6 +24,8 @@ class VueModifierManga {
             document.getElementById('manga-nom').value = manga.nom || "";
             document.getElementById('manga-auteur').value = manga.auteur || "";
             document.getElementById('manga-type').value = manga.type || "";
+            document.getElementById('manga-image').value = manga.image || "";
+            document.getElementById('manga-video').value = manga.video || "";
             document.getElementById('manga-description').value = manga.description || "";
     
             // Ajouter l'événement de soumission au formulaire

@@ -15,7 +15,7 @@ class VueManga {
         document.getElementById("manga-auteur").innerText = this.manga.auteur;
         document.getElementById("manga-type").innerText =  this.manga.type;
         document.getElementById("manga-description").innerText = this.manga.description;
-        
+
          // Afficher l'image
             if (this.manga.imageURL) {
                 document.getElementById("manga-image").innerHTML = `<img src="${this.manga.imageURL}" alt="${this.manga.nom}">`;
