@@ -31,17 +31,16 @@ class VueModifierManga {
             // Ajouter l'événement de soumission au formulaire
             const formulaireModifier = document.getElementById('formulaire-modifier');
             if (formulaireModifier) {
-                formulaireModifier.addEventListener('submit', evenement => this.enregistrer(evenement, manga.id));
+                formulaireModifier.addEventListener('submit', evenement => this.enregistrer(evenement, manga));
             } else {
                 console.error("Le formulaire de modification n'a pas été trouvé.");
             }
         }, 0);
     }
     
-    enregistrer(evenement, mangaId) {
+    enregistrer(evenement, manga) {
         evenement.preventDefault();
 
-        // Récupérer les valeurs mises à jour des champs du formulaire
         let nom = document.getElementById('manga-nom').value;
         let auteur = document.getElementById('manga-auteur').value;
         let type = document.getElementById('manga-type').value;
@@ -50,7 +49,7 @@ class VueModifierManga {
         let videoURL = document.getElementById('manga-video').value || manga.videoURL;
         let description = document.getElementById('manga-description').value;
 
-        // Appeler la fonction de modification avec une instance de Manga mise à jour
-        this.actionModifierManga(new Manga(nom, auteur, type, description, mangaId));
+        this.actionModifierManga(new Manga(nom, auteur, type, imageURL, videoURL, description, manga.id));
     }
+
 }

@@ -43,24 +43,22 @@ class MangaDAO
 
 
 modifier(mangaModifie) {
-    
     const index = this.listeManga.findIndex(manga => manga.id === mangaModifie.id);
 
     if (index !== -1) {
-      
-        this.listeManga[index].nom = mangaModifie.nom;
-        this.listeManga[index].auteur = mangaModifie.auteur;
-        this.listeManga[index].type = mangaModifie.type;
-        this.listeManga[index].imageURL = mangaModifie.imageURL;
-        this.listeManga[index].videoURL= mangaModifie.videoURL;
-        this.listeManga[index].description = mangaModifie.description;
+        console.log("Avant modification :", this.listeManga[index]);
 
+        this.listeManga[index] = mangaModifie;
 
-       
+        console.log("Après modification :", this.listeManga[index]);
+
         localStorage['manga'] = JSON.stringify(this.listeManga);
-        console.log("JSON.stringify(this.listeManga) : " + JSON.stringify(this.listeManga));
-    } 
+
+        // Rediriger vers la liste des mangas
+        window.location.hash = "#liste-manga";
+    }
 }
+
 
 }
  
