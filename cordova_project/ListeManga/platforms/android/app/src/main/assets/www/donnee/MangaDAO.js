@@ -15,18 +15,17 @@ class MangaDAO
         if( localStorage['manga']){
             this.listeManga = JSON.parse(localStorage['manga']);
         }
-
-        for (let position in this.listeManga){
-            let manga = new Manga (this.listeManga[position].nom,
-                                   this.listeManga[position].auteur,
-                                   this.listeManga[position].type,
-                                   this.listeManga[position].description,
-                                   this.listeManga[position].id,
-                                   this.listeManga[position].imageURL,
-                                   this.listeManga[position].videoURL);
-
-            this.listeManga[manga.id] = manga;
-        }
+            for (let i = 0; i < this.listeManga.length; i++) {
+                this.listeManga[i] = new Manga (
+                    this.listeManga[i].nom,
+                    this.listeManga[i].auteur,
+                    this.listeManga[i].type,
+                    this.listeManga[i].imageURL,
+                    this.listeManga[i].videoURL,
+                    this.listeManga[i].description,
+                    this.listeManga[i].id
+                );
+            }
       return this.listeManga;
     }   
 
@@ -52,9 +51,10 @@ modifier(mangaModifie) {
         this.listeManga[index].nom = mangaModifie.nom;
         this.listeManga[index].auteur = mangaModifie.auteur;
         this.listeManga[index].type = mangaModifie.type;
-        this.listeManga[index].description = mangaModifie.description;
         this.listeManga[index].imageURL = mangaModifie.imageURL;
         this.listeManga[index].videoURL= mangaModifie.videoURL;
+        this.listeManga[index].description = mangaModifie.description;
+
 
        
         localStorage['manga'] = JSON.stringify(this.listeManga);

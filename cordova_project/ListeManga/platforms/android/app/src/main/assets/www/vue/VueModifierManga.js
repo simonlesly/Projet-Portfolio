@@ -45,6 +45,9 @@ class VueModifierManga {
         let nom = document.getElementById('manga-nom').value;
         let auteur = document.getElementById('manga-auteur').value;
         let type = document.getElementById('manga-type').value;
+        let imageInput = document.getElementById('manga-image');
+        let imageURL = imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : manga.imageURL;
+        let videoURL = document.getElementById('manga-video').value || manga.videoURL;
         let description = document.getElementById('manga-description').value;
 
         // Appeler la fonction de modification avec une instance de Manga mise à jour
