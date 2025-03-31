@@ -12,4 +12,9 @@
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
+    <widget>
+        <feature name="YoutubeVideoPlayer">
+            <param name="android-package" value="com.bunkerpalace.cordova.YoutubeVideoPlayer" />
+        </feature>
+    </widget>
 </widget>

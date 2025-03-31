@@ -31,9 +31,18 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "CameraPopoverHandle"
       ]
+    },
+    {
+      "id": "cordova-plugin-youtube-video-player.YoutubeVideoPlayer",
+      "file": "plugins/cordova-plugin-youtube-video-player/plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/www/YoutubeVideoPlayer.js",
+      "pluginId": "cordova-plugin-youtube-video-player",
+      "clobbers": [
+        "YoutubeVideoPlayer"
+      ]
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-camera": "8.0.0"
+    "cordova-plugin-camera": "8.0.0",
+    "cordova-plugin-youtube-video-player": "2.4.0"
   };
 });
