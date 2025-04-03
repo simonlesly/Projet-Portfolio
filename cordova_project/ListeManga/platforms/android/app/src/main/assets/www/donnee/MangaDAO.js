@@ -86,10 +86,10 @@ class MangaDAO {
 
 // Fonction pour afficher les mangas
 function afficherMangas(mangasFiltres) {
-    const listeMangas = document.getElementById('liste-mangas');
+    const listeMangas = document.getElementById('liste-manga');
 
     if (!listeMangas) {
-        console.error("❌ ERREUR : Élément 'liste-mangas' introuvable !");
+        console.error("❌ ERREUR : Élément 'liste-manga' introuvable !");
         return;
     }
 
