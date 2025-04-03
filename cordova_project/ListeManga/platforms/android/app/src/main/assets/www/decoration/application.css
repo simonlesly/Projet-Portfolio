@@ -39,6 +39,20 @@ body {
     justify-content: center; /* Centre verticalement */
     min-height: 100vh; /* Hauteur minimale */
 }
+#recherche-container {
+    width: 100%; /* Prend toute la largeur */
+    text-align: center; /* Centre le contenu */
+    margin-top: 20px; /* Espace en haut */
+}
+
+#barre-de-recherche {
+    width: 50%; /* Largeur de la barre de recherche (tu peux ajuster selon ton besoin) */
+    padding: 10px; /* Espacement à l'intérieur pour l'esthétique */
+    font-size: 16px; /* Taille de la police */
+    border: 2px solid #ccc; /* Bordure fine */
+    border-radius: 5px; /* Coins arrondis */
+    box-sizing: border-box; /* Assure que le padding ne dépasse pas la largeur de l'élément */
+}
 
 /* Liste de manga*/
 #liste-cadeau {
