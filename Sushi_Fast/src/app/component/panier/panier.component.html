@@ -1,41 +1,41 @@
-<style>
-    table.center {
-    margin-left: auto;
-    margin-right: auto;
-    }
-    </style>
-    <table>
-    <thead>
-    <tr>
-    <th>numéro commande</th>
-    <th>boxes ajoutées</th>
-    
-    </tr>
-    </thead>
-    <tbody>
+<div *ngIf="panier.listeDeBoxe.length > 0" class="container my-5">
+    <h2 class="text-center mb-4">Mon Panier</h2>
 
-    <td>{{ panier.id}}</td>
-    <td> <span *ngFor="let uneLigne of panier.listeDeBoxe">
-        {{uneLigne.boxe.nom}}<a class="btn">
-        <i class="bi bi-dash-circle-fill"(click)="reduire(uneLigne)"> 
-        {{uneLigne.qte}} </i><i class="bi bi-plus-circle-fill" (click)="augmenter(uneLigne)">
-       </i></a>
-        {{uneLigne.boxe.prix}}
-        <a class="btn"><i class="bi bi-trash-fill" (click)="supprimer(uneLigne)">
-        </i></a>
-        <br>  
-        </span>
-    </td>
-    <tr>liste des saveurs : {{getSaveur()}}</tr>
-    <tr>Nombre totale de saveurs différentes : {{getSaveur().length}}</tr>
-    <tr> prix de la commande : {{getPrix()}} €</tr>
-    
-    
+    <div class="row">
+        <!-- Boucle sur chaque élément du panier -->
+        <div *ngFor="let uneLigne of panier.listeDeBoxe" class="col-md-4 mb-3">
+            <div class="card shadow-sm">
+                <img class="card-img-top" [src]="'assets/images/' + uneLigne.boxe.image" alt="{{ uneLigne.boxe.nom }}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ uneLigne.boxe.nom }}</h5>
+                    <p class="card-text text-center">Prix : {{ uneLigne.boxe.prix }} €</p>
 
-    
-    
-       
-    </tbody>
-    </table>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Boutons de quantité -->
+                        <div>
+                            <button class="btn btn-warning btn-sm" (click)="reduire(uneLigne)">
+                                <i class="bi bi-dash-circle-fill"></i> Réduire
+                            </button>
+                            <span class="mx-2">{{ uneLigne.qte }}</span>
+                            <button class="btn btn-success btn-sm" (click)="augmenter(uneLigne)">
+                                <i class="bi bi-plus-circle-fill"></i> Augmenter
+                            </button>
+                        </div>
+                        
+                        <!-- Bouton pour supprimer l'article -->
+                        <button class="btn btn-danger btn-sm" (click)="supprimer(uneLigne)">
+                            <i class="bi bi-trash-fill"></i> Supprimer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <div class="mt-4">
+        <!-- Affichage des saveurs et du total -->
+        <p><strong>Liste des saveurs :</strong> {{ getSaveur() }}</p>
+        <p><strong>Nombre total de saveurs différentes :</strong> {{ getSaveur().length }}</p>
+        <p><strong>Prix total de la commande :</strong> {{ getPrix() }} €</p>
+    </div>
+</div>

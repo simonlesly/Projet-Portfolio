@@ -1,0 +1,73 @@
+/* Global container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style général pour les cartes du panier */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image dans la carte */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Corps de la carte */
+.card-body {
+    text-align: center;
+}
+
+/* Style pour les boutons de gestion du panier */
+.btn {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.btn-warning, .btn-success, .btn-danger {
+    margin: 5px;
+}
+
+.btn-sm {
+    font-size: 14px;
+}
+
+/* Alignement du texte dans les colonnes */
+.text-center {
+    text-align: center;
+}
+
+/* Effet sur les boutons */
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Style pour les icônes dans les boutons */
+.bi {
+    font-size: 18px;
+}
+
+/* Section de résumé en bas */
+.mt-4 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Espacement entre les cartes */
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+/* Pour la section des saveurs et du prix */
+p {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
