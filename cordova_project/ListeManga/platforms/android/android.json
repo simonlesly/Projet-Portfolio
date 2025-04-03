@@ -11,6 +11,10 @@
             {
               "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
             }
           ],
           "widget": [
@@ -74,6 +78,9 @@
     },
     "cordova-plugin-youtube-video-player": {
       "PACKAGE_NAME": "ca.qc.cgmatane.mobile.listemanga"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "ca.qc.cgmatane.mobile.listemanga"
     }
   },
   "dependent_plugins": {},
@@ -117,10 +124,19 @@
       "clobbers": [
         "YoutubeVideoPlayer"
       ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-camera": "8.0.0",
-    "cordova-plugin-youtube-video-player": "2.4.0"
+    "cordova-plugin-youtube-video-player": "2.4.0",
+    "cordova-plugin-inappbrowser": "6.0.0"
   }
 }

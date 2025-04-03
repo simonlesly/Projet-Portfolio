@@ -16,6 +16,13 @@ html {
 
 /* Styles globaux
    ========================================================================== */
+#manga-image img {
+    max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Maintient le ratio de l'image */
+    display: block; /* Évite les marges indésirables */
+    margin: 10px auto; /* Centre l'image */
+    max-height: 300px; /* Ajuste la hauteur maximale selon ton besoin */
+}
 
 body {
   margin: 0;

@@ -22,10 +22,18 @@ class VueManga {
             document.getElementById("manga-image").innerHTML = "<img src='image-par-defaut.jpg' alt='Image par défaut'>";
         }
 
-        // Afficher la vidéo
-        if (this.manga.videoURL) {
-            document.getElementById("manga-video").innerHTML = `<video controls><source src="${this.manga.videoURL}" type="video/mp4"></video>`;
-        }
+        // Afficher la vidéo si elle existe
+                let videoContainer = document.getElementById('manga-video-container');
+                if (manga.video) {
+                    // Intégrer directement la vidéo dans l'application
+                    videoContainer.innerHTML = `
+                        <video width="100%" controls>
+                            <source src="${manga.video}" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>`;
+                } else {
+                    videoContainer.innerHTML = "Pas de vidéo disponible.";
+                }
         document.getElementById("manga-description").innerText = this.manga.description;
 
         document.querySelector(".action[href='#modifier-manga']").href = `#modifier-manga/${this.manga.id}`;
