@@ -9,7 +9,7 @@ class VueAjouterManga{
     }
 
     afficher() {
-        document.getElementsByTagName("body")[0].innerHTML = this.html; 
+        document.getElementsByTagName("body")[0].innerHTML = this.html;
         document.getElementById('formulaire-ajouter').addEventListener('submit', evenement => this.enregistrer(evenement));
     }
 
@@ -37,5 +37,5 @@ class VueAjouterManga{
         }
     }
 
-}        
+}
 

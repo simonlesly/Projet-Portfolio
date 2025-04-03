@@ -44,7 +44,7 @@ class Application {
                     this.vueModifierManga.afficher(manga);
                 } else {
                     console.error("ID de manga non valide dans l'URL: " + idManga);
-                    this.window.location.hash = "#"; 
+                    this.window.location.hash = "#";
                 }
             } else {
                 console.error("Format d'URL incorrect pour la modification du manga.");
@@ -54,7 +54,7 @@ class Application {
             if (navigation && navigation[1]) {
                 let idManga = parseInt(navigation[1], 10);
                 let manga = this.mangaDAO.lister().find(m => m.id === idManga);
-                
+
                 if (manga) {
                     this.vueManga.initialiserManga(manga);
                     this.vueManga.afficher();
