@@ -72,5 +72,35 @@ modifier(mangaModifie) {
     }
 }
 
+filtrerMangas(termeRecherche) {
+    const terme = termeRecherche.toLowerCase(); // Convertir la recherche en minuscules pour rendre la recherche insensible à la casse
+
+    // Filtrer les mangas en fonction des critères (nom, auteur, type)
+    const mangasFiltres = mangas.filter(manga => {
+        return (
+            manga.nom.toLowerCase().includes(terme) ||
+            manga.auteur.toLowerCase().includes(terme) ||
+            manga.type.toLowerCase().includes(terme)
+        );
+    });
+
+    afficherMangas(mangasFiltres); // Mettre à jour l'affichage avec les mangas filtrés
+}
+
+afficherMangas(mangasFiltres) {
+    const listeMangas = document.getElementById('liste-mangas');
+    listeMangas.innerHTML = ''; // Vider la liste avant de la mettre à jour
+
+    if (mangasFiltres.length === 0) {
+        listeMangas.innerHTML = '<li>Aucun manga trouvé.</li>';
+    } else {
+        mangasFiltres.forEach(manga => {
+            const li = document.createElement('li');
+            li.textContent = `${manga.nom} - ${manga.auteur} - ${manga.type}`;
+            listeMangas.appendChild(li);
+        });
+    }
+}
+
 
 }

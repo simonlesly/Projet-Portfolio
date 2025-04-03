@@ -11,6 +11,9 @@ class VueListeManga {
 
     afficher() {
         document.body.innerHTML = this.html;
+        document.getElementById('barre-de-recherche').addEventListener('input', function() {
+            filtrerMangas(this.value);
+        });
 
         let listeManga = document.getElementById("liste-manga");
         const listeMangaItemHTML = listeManga.innerHTML;
