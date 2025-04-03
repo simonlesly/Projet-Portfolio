@@ -15,17 +15,27 @@ class VueAjouterManga{
 
     enregistrer(evenement) {
         evenement.preventDefault();
-      
+
         let nom = document.getElementById('manga-nom').value;
         let auteur = document.getElementById('manga-auteur').value;
         let type = document.getElementById('manga-type').value;
-        let imageURL = document.getElementById('manga-image').files[0] ? URL.createObjectURL(document.getElementById('manga-image').files[0]) : "";
+        let imageInput = document.getElementById('manga-image').files[0];
+        let imageURL = imageInput ? URL.createObjectURL(imageInput) : "";
         let videoURL = document.getElementById('manga-video').value;
         let description = document.getElementById('manga-description').value;
 
+        // Si une image est choisie, la convertir en DataURL
+        if (imageInput) {
+            let reader = new FileReader();
+            reader.onloadend = () => {
+                imageURL = reader.result;
+                this.actionAjouterManga(new Manga(nom, auteur, type, imageURL, videoURL, description, null));
+            };
+            reader.readAsDataURL(imageInput);
+        } else {
+            this.actionAjouterManga(new Manga(nom, auteur, type, imageURL, videoURL, description, null));
+        }
+    }
 
-        this.actionAjouterManga(new Manga(nom, auteur, type, imageURL, videoURL, description, null));
-
-      }
 }        
 

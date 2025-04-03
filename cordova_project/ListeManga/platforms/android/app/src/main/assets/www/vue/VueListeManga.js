@@ -31,4 +31,5 @@ class VueListeManga {
         listeManga.innerHTML = listeMangaHTMLRemplacement;
     }
 
+
 }

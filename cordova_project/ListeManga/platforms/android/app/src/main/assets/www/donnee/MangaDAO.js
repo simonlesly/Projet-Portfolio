@@ -29,17 +29,30 @@ class MangaDAO
       return this.listeManga;
     }   
 
-    ajouter(manga) {
-        if (this.listeManga.length > 0)
-            manga.id = this.listeManga[this.listeManga.length-1].id + 1;
-        else
-            manga.id = 0;
+   ajouter(manga) {
+       if (this.listeManga.length > 0)
+           manga.id = this.listeManga[this.listeManga.length-1].id + 1;
+       else
+           manga.id = 0;
 
-        this.listeManga[manga.id] = manga;
+       // Gérer l'URL de l'image
+       if (manga.imageURL && typeof manga.imageURL !== 'string') {
+           // Si l'image est un objet Blob ou un autre type
+           let fileReader = new FileReader();
+           fileReader.onloadend = function () {
+               manga.imageURL = fileReader.result;  // Convertir en DataURL
+               this.listeManga[manga.id] = manga;
+               localStorage['manga'] = JSON.stringify(this.listeManga);
+           };
+           fileReader.readAsDataURL(manga.imageURL); // Lire comme DataURL
+       } else {
+           this.listeManga[manga.id] = manga;
+           localStorage['manga'] = JSON.stringify(this.listeManga);
+       }
 
-        localStorage['manga'] = JSON.stringify(this.listeManga);
-        console.log("JSON.stringify(this.listeManga) : " + JSON.stringify(this.listeManga));
-    }
+       console.log("JSON.stringify(this.listeManga) : " + JSON.stringify(this.listeManga));
+   }
+
 
 
 modifier(mangaModifie) {

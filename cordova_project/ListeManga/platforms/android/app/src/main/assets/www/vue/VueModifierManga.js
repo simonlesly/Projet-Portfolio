@@ -42,20 +42,21 @@ class VueModifierManga {
         }, 0);
     }
     
-   enregistrer(evenement, manga) {
-       evenement.preventDefault();
+enregistrer(evenement, manga) {
+    evenement.preventDefault();
 
-       let nom = document.getElementById('manga-nom').value;
-       let auteur = document.getElementById('manga-auteur').value;
-       let type = document.getElementById('manga-type').value;
-       let imageInput = document.getElementById('manga-image');
-       let imageURL = imageInput.files.length > 0 ? URL.createObjectURL(imageInput.files[0]) : manga.imageURL; // Gère l'ancienne image si aucune nouvelle n'est téléchargée
-       let videoURL = document.getElementById('manga-video').value || manga.videoURL;
-       let description = document.getElementById('manga-description').value;
+    let nom = document.getElementById('manga-nom').value;
+    let auteur = document.getElementById('manga-auteur').value;
+    let type = document.getElementById('manga-type').value;
+    let imageInput = document.getElementById('manga-image').files[0];
+    let imageURL = imageInput ? URL.createObjectURL(imageInput) : manga.imageURL; // Utiliser l'ancienne image si aucune nouvelle image n'est téléchargée
+    let videoURL = document.getElementById('manga-video').value || manga.videoURL;
+    let description = document.getElementById('manga-description').value;
 
-       // Créer un nouvel objet Manga avec les informations mises à jour
-       this.actionModifierManga(new Manga(nom, auteur, type, imageURL, videoURL, description, manga.id));
-   }
+    // Créer un nouvel objet Manga avec les informations mises à jour
+    this.actionModifierManga(new Manga(nom, auteur, type, imageURL, videoURL, description, manga.id));
+}
+
 
 
 }
