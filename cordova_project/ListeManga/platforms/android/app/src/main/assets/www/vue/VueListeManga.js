@@ -11,9 +11,12 @@ class VueListeManga {
 
     afficher() {
         document.body.innerHTML = this.html;
-        document.getElementById('barre-de-recherche').addEventListener('input', function() {
-            filtrerMangas(this.value);
+        document.getElementById('barre-de-recherche').addEventListener('input', (event) => {
+            let mangaDAO = new MangaDAO(); // Crée une instance de MangaDAO
+            mangaDAO.initialiserListeManga(this.listeMangaDonnee); // Initialise avec les mangas actuels
+            mangaDAO.filtrerMangas(event.target.value); // Filtre les mangas avec la valeur de l'input
         });
+
 
         let listeManga = document.getElementById("liste-manga");
         const listeMangaItemHTML = listeManga.innerHTML;

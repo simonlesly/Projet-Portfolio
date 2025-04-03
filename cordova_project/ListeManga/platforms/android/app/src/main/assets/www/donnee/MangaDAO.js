@@ -1,94 +1,98 @@
-class MangaDAO
-{
-    constructor(){
-        /*
-        this.listeManga = [
-            {nom : "Naruto "  , auteur : "Masashi Kishimoto", type :  "Shonen"  , description :  "Naruto est orphelin et a servi de réceptacle, étant bébé, pour sceller en lui le démon Juubi qui menaçait son village. Avec le temps les habitants ne voient plus en lui que le démon et lemettent à l'écart. Toujours seul, son caractère fougueux ne l'aide pas vraiment à se faire apprécier dans son village"   , id:0},
-            {nom : "Noragami " , auteur : " Adachitoka" , type :  "Shonen"  , description :  "Hiyori Iki passe une scolarité difficile, subissant les brimades de ses camarades. Tandis qu'elle se réfugie dans les toilettes pour pleurer, elle lit sur le mure un message, “je résous vos problèmes” et un numéro de téléphone. En l'appelant, elle fait la connaissance d'un sans-abri qui prétend être un dieu…"   , id:1},
-            {nom : "Attaque des titants " , auteur : "Hajime Isayama."  , type :"Shonen"    , description : "Dans un monde ravagé par des titans mangeurs d'homme depuis plus d'un siècle, les rares survivants de l'Humanité n'ont d'autre choix pour survivre que de se barricader dans une cité-forteresse."    , id:2}]
-        */
-
+// Déclaration de la classe MangaDAO
+class MangaDAO {
+    constructor() {
         this.listeManga = [];
     }
 
-    lister(){
-        if( localStorage['manga']){
+     initialiserListeManga(liste) {
+            this.listeManga = liste;
+        }
+
+
+
+
+    lister() {
+        if (localStorage['manga']) {
             this.listeManga = JSON.parse(localStorage['manga']);
         }
-            for (let i = 0; i < this.listeManga.length; i++) {
-                this.listeManga[i] = new Manga (
-                    this.listeManga[i].nom,
-                    this.listeManga[i].auteur,
-                    this.listeManga[i].type,
-                    this.listeManga[i].imageURL,
-                    this.listeManga[i].videoURL,
-                    this.listeManga[i].description,
-                    this.listeManga[i].id
-                );
-            }
-      return this.listeManga;
+        for (let i = 0; i < this.listeManga.length; i++) {
+            this.listeManga[i] = new Manga(
+                this.listeManga[i].nom,
+                this.listeManga[i].auteur,
+                this.listeManga[i].type,
+                this.listeManga[i].imageURL,
+                this.listeManga[i].videoURL,
+                this.listeManga[i].description,
+                this.listeManga[i].id
+            );
+        }
+        return this.listeManga;
     }
 
-   ajouter(manga) {
-       if (this.listeManga.length > 0)
-           manga.id = this.listeManga[this.listeManga.length-1].id + 1;
-       else
-           manga.id = 0;
+    ajouter(manga) {
+        if (this.listeManga.length > 0)
+            manga.id = this.listeManga[this.listeManga.length - 1].id + 1;
+        else
+            manga.id = 0;
 
-       // Gérer l'URL de l'image
-       if (manga.imageURL && typeof manga.imageURL !== 'string') {
-           // Si l'image est un objet Blob ou un autre type
-           let fileReader = new FileReader();
-           fileReader.onloadend = function () {
-               manga.imageURL = fileReader.result;  // Convertir en DataURL
-               this.listeManga[manga.id] = manga;
-               localStorage['manga'] = JSON.stringify(this.listeManga);
-           };
-           fileReader.readAsDataURL(manga.imageURL); // Lire comme DataURL
-       } else {
-           this.listeManga[manga.id] = manga;
-           localStorage['manga'] = JSON.stringify(this.listeManga);
-       }
+        // Gérer l'URL de l'image
+        if (manga.imageURL && typeof manga.imageURL !== 'string') {
+            let fileReader = new FileReader();
+            fileReader.onloadend = function () {
+                manga.imageURL = fileReader.result;  // Convertir en DataURL
+                this.listeManga[manga.id] = manga;
+                localStorage['manga'] = JSON.stringify(this.listeManga);
+            };
+            fileReader.readAsDataURL(manga.imageURL); // Lire comme DataURL
+        } else {
+            this.listeManga[manga.id] = manga;
+            localStorage['manga'] = JSON.stringify(this.listeManga);
+        }
 
-       console.log("JSON.stringify(this.listeManga) : " + JSON.stringify(this.listeManga));
-   }
-
-
-
-modifier(mangaModifie) {
-    const index = this.listeManga.findIndex(manga => manga.id === mangaModifie.id);
-
-    if (index !== -1) {
-        console.log("Avant modification :", this.listeManga[index]);
-
-        this.listeManga[index] = mangaModifie;
-
-        console.log("Après modification :", this.listeManga[index]);
-
-        localStorage['manga'] = JSON.stringify(this.listeManga);
-
-        // Rediriger vers la liste des mangas
-        window.location.hash = "#liste-manga";
+        console.log("JSON.stringify(this.listeManga) : " + JSON.stringify(this.listeManga));
     }
-}
 
-filtrerMangas(termeRecherche) {
-    const terme = termeRecherche.toLowerCase(); // Convertir la recherche en minuscules pour rendre la recherche insensible à la casse
+    modifier(mangaModifie) {
+        const index = this.listeManga.findIndex(manga => manga.id === mangaModifie.id);
 
-    // Filtrer les mangas en fonction des critères (nom, auteur, type)
-    const mangasFiltres = mangas.filter(manga => {
-        return (
-            manga.nom.toLowerCase().includes(terme) ||
-            manga.auteur.toLowerCase().includes(terme) ||
-            manga.type.toLowerCase().includes(terme)
-        );
-    });
+        if (index !== -1) {
+            console.log("Avant modification :", this.listeManga[index]);
 
-    afficherMangas(mangasFiltres); // Mettre à jour l'affichage avec les mangas filtrés
-}
+            this.listeManga[index] = mangaModifie;
 
-afficherMangas(mangasFiltres) {
+            console.log("Après modification :", this.listeManga[index]);
+
+            localStorage['manga'] = JSON.stringify(this.listeManga);
+
+            // Rediriger vers la liste des mangas
+            window.location.hash = "#liste-manga";
+        }
+    }
+
+    // Méthode filtrerMangas
+    filtrerMangas(termeRecherche) {
+            if (!this.listeManga) return;
+
+            const terme = termeRecherche.toLowerCase();
+            const mangasFiltres = this.listeManga.filter(manga =>
+                manga.nom.toLowerCase().includes(terme) ||
+                manga.auteur.toLowerCase().includes(terme) ||
+                manga.type.toLowerCase().includes(terme)
+            );
+
+            afficherMangas(mangasFiltres);
+        }
+    }
+
+// Fonction pour afficher les mangas
+function afficherMangas(mangasFiltres) {
     const listeMangas = document.getElementById('liste-mangas');
+
+    if (!listeMangas) {
+        console.error("❌ ERREUR : Élément 'liste-mangas' introuvable !");
+        return;
+    }
+
     listeMangas.innerHTML = ''; // Vider la liste avant de la mettre à jour
 
     if (mangasFiltres.length === 0) {
@@ -97,10 +101,30 @@ afficherMangas(mangasFiltres) {
         mangasFiltres.forEach(manga => {
             const li = document.createElement('li');
             li.textContent = `${manga.nom} - ${manga.auteur} - ${manga.type}`;
+
+            // 🔥 Ajouter un événement click à chaque manga
+            li.addEventListener("click", function() {
+                window.location.hash = `#details-manga-${manga.id}`;
+            });
+
             listeMangas.appendChild(li);
         });
     }
 }
 
 
-}
+
+// Ajouter l'écouteur d'événement sur la barre de recherche
+document.addEventListener('DOMContentLoaded', function () {
+    let timeout;
+    const rechercheElement = document.getElementById('barre-de-recherche');
+    if (rechercheElement) {
+        rechercheElement.addEventListener('input', function () {
+            clearTimeout(timeout); // Annuler le précédent délai
+            timeout = setTimeout(() => {
+                const mangaDAO = new MangaDAO(); // Créer une instance de MangaDAO
+                mangaDAO.filtrerMangas(this.value); // Appeler la fonction filtrerMangas
+            }, 300); // Attendre 300 ms avant de filtrer pour optimiser
+        });
+    }
+});
