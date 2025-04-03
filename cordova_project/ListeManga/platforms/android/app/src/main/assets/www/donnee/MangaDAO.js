@@ -39,8 +39,8 @@ class MangaDAO
        if (manga.imageURL && typeof manga.imageURL !== 'string') {
            // Si l'image est un objet Blob ou un autre type
            let fileReader = new FileReader();
-           fileReader.onloadend = () => {
-               manga.imageURL = fileReader.result;
+           fileReader.onloadend = function () {
+               manga.imageURL = fileReader.result;  // Convertir en DataURL
                this.listeManga[manga.id] = manga;
                localStorage['manga'] = JSON.stringify(this.listeManga);
            };
@@ -74,4 +74,3 @@ modifier(mangaModifie) {
 
 
 }
-

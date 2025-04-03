@@ -19,13 +19,7 @@
 
     <title>Liste de Manga </title>
     <link rel="stylesheet" href="decoration/application.css">
-    <<style>
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-</style>
-
+    <style></style>
     <script src="cordova.js"></script>
     <script src="modele/Manga.js"></script>
     <script src="donnee/MangaDAO.js"></script>
@@ -37,73 +31,73 @@
 </head>
 <body>
 <div id="page-chargement-application">Chargement de l'application Bibliothèque de Manga</div>
-    
-    <script type="plain/text" id="html-vue-liste-manga">
-        <div class="page">
-            <h1>Liste de manga</h1>
-            <a class="action" href="#ajouter-manga">Ajouter un manga</a>
-            <ul id="liste-manga">
-                <li><a href="#manga/{Manga.id}" class="liste-manga-item">{Manga.nom}</a> 
-                    </li>
-            </ul>
-        </div>
-    </script>
 
-    <script type="plain/text" id="html-vue-ajouter-manga">
-        <div class="page">
-            <h1>Ajout d'un manga</h1>
-            <form id="formulaire-ajouter">
-                <fieldset>
-                    <legend>Identification d'un manga</legend>
-                    <div>
-                        <label for="manga-nom">Nom</label>
-                        <input type="text" id="manga-nom"/>
-                    </div>
-                    <div>
-                        <label for="manga-auteur">Auteur</label>
-                        <input type="text" id="manga-auteur"/>
-                    </div>
-                    <div>
-                        <label for="manga-type">Type</label>
-                        <input type="text" id="manga-type"/>
-                    </div>
-                    <div>
-                        <label for="manga-image">Image du manga</label>
-                        <input type="file" id="manga-image" name="image">
-                    </div>
-                    <div>
-                        <label for="manga-video">URL de la vidéo (YouTube, MP4, etc.)</label>
-                        <input type="text" id="manga-video" name="video">
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Détails sur le manga</legend>
-                    <div>
-                        <label for="manga-description">Description</label>
-                        <textarea id="manga-description"></textarea>
-                    </div>
-                </fieldset>
-                <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
-            </form>
-            <a href="#" class="action">Annuler et revenir à la liste</a>
-        </div>
-    </script>  
+<script type="plain/text" id="html-vue-liste-manga">
+    <div class="page">
+        <h1>Liste de manga</h1>
+        <a class="action" href="#ajouter-manga">Ajouter un manga</a>
+        <ul id="liste-manga">
+            <li><a href="#manga/{Manga.id}" class="liste-manga-item">{Manga.nom}</a>
+                </li>
+        </ul>
+    </div>
+</script>
 
-    <script type="plain/text" id="html-vue-manga">
-      <div class="page">
-          <h1>Détails du manga</h1>
-          <h2 id="manga-nom"></h2>
-          <p id="manga-auteur"></p>
-          <p id="manga-type"></p>
-          <p id="manga-image"></p>
-          <p id="manga-video"></p>
-          <p id="manga-description"></p>
-          <a class="action" href="#modifier-manga">Modifier</a>
-          <a href="#" class="action">Revenir à la liste</a>
-      </div>
-  </script>
-  
-  <script type="plain/text" id="html-vue-modifier-manga">
+<script type="plain/text" id="html-vue-ajouter-manga">
+    <div class="page">
+        <h1>Ajout d'un manga</h1>
+        <form id="formulaire-ajouter">
+            <fieldset>
+                <legend>Identification d'un manga</legend>
+                <div>
+                    <label for="manga-nom">Nom</label>
+                    <input type="text" id="manga-nom"/>
+                </div>
+                <div>
+                    <label for="manga-auteur">Auteur</label>
+                    <input type="text" id="manga-auteur"/>
+                </div>
+                <div>
+                    <label for="manga-type">Type</label>
+                    <input type="text" id="manga-type"/>
+                </div>
+                <div>
+                    <label for="manga-image">Image du manga</label>
+                    <input type="file" id="manga-image" name="image">
+                </div>
+                <div>
+                    <label for="manga-video">URL de la vidéo (YouTube, MP4, etc.)</label>
+                    <input type="text" id="manga-video" name="video">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Détails sur le manga</legend>
+                <div>
+                    <label for="manga-description">Description</label>
+                    <textarea id="manga-description"></textarea>
+                </div>
+            </fieldset>
+            <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
+        </form>
+        <a href="#" class="action">Annuler et revenir à la liste</a>
+    </div>
+</script>
+
+<script type="plain/text" id="html-vue-manga">
+    <div class="page">
+        <h1>Détails du manga</h1>
+        <h2 id="manga-nom"></h2>
+        <p id="manga-auteur"></p>
+        <p id="manga-type"></p>
+        <p id="manga-image"></p>
+        <p id="manga-video"></p>
+        <p id="manga-description"></p>
+        <a class="action" href="#modifier-manga">Modifier</a>
+        <a href="#" class="action">Revenir à la liste</a>
+    </div>
+</script>
+
+<script type="plain/text" id="html-vue-modifier-manga">
     <div class="page">
         <h1>Modification du manga</h1>
         <form id="formulaire-modifier">
