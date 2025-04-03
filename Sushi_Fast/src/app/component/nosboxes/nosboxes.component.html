@@ -1,0 +1,37 @@
+<style>
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+
+<div *ngIf="boxes.length > 0" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 ">
+
+    <div *ngFor="let boxe of boxes" class="col my-2">
+    <div  class="card  mx-auto" style="width: 18rem;">
+
+<!-- méthode pour afficher les boxes (nom,prix,images)--> 
+        <img [src]="'http://localhost:8080/api/image'+'/'+ boxe.image" class="card-img-top" alt="{{ boxe.nom }}">
+        <div class="card-body">
+            <h4 class="card-title text-center" >{{ boxe.nom }}
+
+<!--Boutton i relier à la page details-boxes-->
+                <a class="btn"><i class="bi bi-question-circle-fill" [routerLink]="'/details-boxes/'+boxe.id" routerLinkActive="active"></i></a>
+            </h4>
+
+<!--Boutton ajouter au panier-->
+            <div class="d-grid gap-2 col-6 mx-auto">
+            
+            <a class="btn btn-primary" (click)="ajouter(boxe)">Ajouter au panier
+                <br>
+            {{ boxe.prix }}€
+            </a> 
+            
+            
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<h1> Le prix moyen de toutes les boxes est de : {{moyennePrix()}} €</h1>

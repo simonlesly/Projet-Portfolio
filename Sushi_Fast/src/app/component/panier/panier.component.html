@@ -1,0 +1,41 @@
+<style>
+    table.center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    </style>
+    <table>
+    <thead>
+    <tr>
+    <th>numéro commande</th>
+    <th>boxes ajoutées</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+
+    <td>{{ panier.id}}</td>
+    <td> <span *ngFor="let uneLigne of panier.listeDeBoxe">
+        {{uneLigne.boxe.nom}}<a class="btn">
+        <i class="bi bi-dash-circle-fill"(click)="reduire(uneLigne)"> 
+        {{uneLigne.qte}} </i><i class="bi bi-plus-circle-fill" (click)="augmenter(uneLigne)">
+       </i></a>
+        {{uneLigne.boxe.prix}}
+        <a class="btn"><i class="bi bi-trash-fill" (click)="supprimer(uneLigne)">
+        </i></a>
+        <br>  
+        </span>
+    </td>
+    <tr>liste des saveurs : {{getSaveur()}}</tr>
+    <tr>Nombre totale de saveurs différentes : {{getSaveur().length}}</tr>
+    <tr> prix de la commande : {{getPrix()}} €</tr>
+    
+    
+
+    
+    
+       
+    </tbody>
+    </table>
+
+

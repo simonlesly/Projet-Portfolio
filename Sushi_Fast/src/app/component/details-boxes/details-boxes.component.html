@@ -1,0 +1,31 @@
+<style>
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div *ngIf="boxes.length > 0" class="row row-cols-1 ">
+    <div  class="card  mx-auto" style="width: 21rem;">
+        
+<!-- méthode pour afficher les boxes (nom,prix,images)-->        
+            <img [src]="'http://localhost:8080/api/image/'+laBox?.image" class="card-img-top" alt="{{ laBox?.nom }}"
+                style="width: 20em;">
+            <div class="card-body">
+                <div class="card-text">
+                <ul>
+    <!--Afficher les aliments de chaque Boxes-->
+                    <h3 class="card-title text-center">Aliments</h3>
+                    <div *ngFor="let aliments of laBox?.aliments">
+                        <div>{{ aliments.quantite }} {{ aliments.nom }}</div>
+                    </div>
+                </ul>
+    <!--Afficher les saveurs contenue dans les Boxes-->
+                <h3 class="card-title text-center">Saveurs</h3>
+                <div class="card-title text-center">{{ laBox?.saveurs }}</div>
+                <div class="text-center">{{ laBox?.prix }}€</div>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <a routerLink="/nosboxes" class="btn btn-primary">Retour à la carte</a> 
+            </div>
+        </div>
