@@ -24,8 +24,9 @@ class VueManga {
 
         // Afficher la vidéo
         if (this.manga.videoURL) {
-            document.getElementById("manga-video").innerHTML = `<video controls><source src="${this.manga.videoURL}" type="video/mp4"></video>`;
-        }
+            document.getElementById("manga-video").innerHTML = `<a href="${this.manga.videoURL}" target="_blank">Cliquez ici pour voir la vidéo</a>`;
+            }
+        
         document.getElementById("manga-description").innerText = this.manga.description;
 
         document.querySelector(".action[href='#modifier-manga']").href = `#modifier-manga/${this.manga.id}`;
