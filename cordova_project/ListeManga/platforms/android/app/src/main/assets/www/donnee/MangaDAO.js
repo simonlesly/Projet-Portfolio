@@ -100,7 +100,7 @@ function afficherMangas(mangasFiltres) {
     } else {
         mangasFiltres.forEach(manga => {
             const li = document.createElement('li');
-            li.textContent = `${manga.nom} - ${manga.auteur} - ${manga.type}`;
+            li.textContent = `${manga.nom} `;
 
             // 🔥 Ajouter un événement click à chaque manga
             li.addEventListener("click", function() {

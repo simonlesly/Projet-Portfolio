@@ -39,37 +39,57 @@ body {
     justify-content: center; /* Centre verticalement */
     min-height: 100vh; /* Hauteur minimale */
 }
+/* Conteneur de la barre de recherche */
 #recherche-container {
     width: 100%; /* Prend toute la largeur */
     text-align: center; /* Centre le contenu */
-    margin-top: 20px; /* Espace en haut */
+    margin-top: 30px; /* Un peu plus d'espace au-dessus de la barre de recherche */
+    display: flex; /* Utilise flex pour centrer la liste */
+
+        align-items: center; /* Centre horizontalement */
+        justify-content: center; /* Centre verticalement */
 }
 
+/* Style de la barre de recherche */
 #barre-de-recherche {
-    width: 50%; /* Largeur de la barre de recherche (tu peux ajuster selon ton besoin) */
-    padding: 10px; /* Espacement à l'intérieur pour l'esthétique */
-    font-size: 16px; /* Taille de la police */
+    width: 60%; /* Augmenter la largeur de la barre (tu peux ajuster cette valeur) */
+    height : 100%;
+    padding: 10px; /* Espacement intérieur pour rendre la barre plus esthétique */
+    font-size: 40px; /* Taille du texte */
     border: 2px solid #ccc; /* Bordure fine */
     border-radius: 5px; /* Coins arrondis */
-    box-sizing: border-box; /* Assure que le padding ne dépasse pas la largeur de l'élément */
+    box-sizing: border-box; /* Assure que le padding n'affecte pas la largeur totale */
+    margin-bottom: 20px; /* Espacement sous la barre de recherche */
 }
 
-/* Liste de manga*/
+
+/* Liste des mangas */
 #liste-cadeau {
-    list-style-type: none; /* Supprime les puces de la liste */
-    padding: 20px; /* Ajout d'un padding pour le contenu de la liste */
-    flex: 1; /* Permet à la liste de prendre plus d'espace */
-    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc opaque pour la liste */
+    list-style-type: none; /* Supprime les puces */
+    padding: 20px; /* Padding pour ajouter de l'espace à l'intérieur */
+    flex: 1; /* Permet de prendre plus d'espace */
     border-radius: var(--theme-bordure-rondeur); /* Coins arrondis */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    width: 80%; /* Largeur de la liste */
+    margin-top: 20px; /* Espace au-dessus de la liste */
 }
 
 /* Éléments de la liste */
 .liste-cadeau-item {
-    color: #000; /* Couleur du texte en noir */
-    text-transform: capitalize; /* Met en majuscule la première lettre */
-    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #000; /* Texte noir */
+    text-transform: capitalize; /* Première lettre en majuscule */
+    text-decoration: none; /* Enlève le soulignement */
+    margin: 10px 0; /* Espacement entre les items de la liste */
+    display: block; /* Pour que les items prennent toute la largeur */
 }
+
+/* Cacher la barre de recherche dans les petits écrans */
+@media screen and (max-width: 600px) {
+    #barre-de-recherche {
+        width: 80%; /* La barre devient plus large sur les petits écrans */
+    }
+}
+
 
 fieldset {
     color: #000; /* Couleur du texte dans fieldset */
