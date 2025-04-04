@@ -1,23 +1,24 @@
 # question.py
 
-# Liste de questions générales possibles
+# Liste de questions générales avec leurs poids
 questions = [
-    ("Est-ce que c'est un homme ?", "homme"),
-    ("Est-ce que c'est un humain ?", "humain"),
-    ("Est-ce qu'il a des pouvoirs ?", "pouvoirs"),
-    ("Est-ce que c'est un pillier ?", "pillier"),
-    ("Est-ce que c'est une lune supérieur ?", "supérieur"),
-    ("Est-ce qu'il a des cheveux noir ?", "cheveux_noir"),
-    ("Est-ce qu'il a un frère ou une soeur ?", "famille"),
-    ("Est-ce que c'est un adulte ?", "adulte"),
-    ("Est-ce qu'il utilise une arme à feu ?", "arme"),
-    ("Est-ce qu'il maitrise le souffle de l'eau ?", "eau"),
-    ("Est-ce qu'il maitrise le souffle du feu ?", "feu"),
-    ("Est-ce qu'il a un serpent ?", "serpent"),
-    ("Est-ce qu'il porte un masque ?", "masque"),
-    ("Est-ce que c'est le chef des démons ?", "chef"),
-    ("Est-ce qu'il a des yeux dans les tons pastel arc-en-ciel ?", "arc-en-ciel"),
-    ("Est-ce que son pouvoir est liée à des poissons et des pots ?", "poisson")
-    
-    
+    {"question": "Est-ce que c'est un homme ?", "cle": "homme", "poids": 0.9},
+    {"question": "Est-ce que c'est un humain ?", "cle": "humain", "poids": 0.8},
+    {"question": "Est-ce qu'il a des pouvoirs ?", "cle": "pouvoirs", "poids": 0.7},
+    {"question": "Est-ce que c'est un pillier ?", "cle": "pillier", "poids": 0.6},
+    {"question": "Est-ce que c'est une lune supérieure ?", "cle": "supérieur", "poids": 0.6},
+    {"question": "Est-ce qu'il a des cheveux noirs ?", "cle": "cheveux_noir", "poids": 0.5},
+    {"question": "Est-ce qu'il a un frère ou une sœur ?", "cle": "famille", "poids": 0.5},
+    {"question": "Est-ce que c'est un adulte ?", "cle": "adulte", "poids": 0.5},
+    {"question": "Est-ce qu'il utilise une arme à feu ?", "cle": "arme", "poids": 0.4},
+    {"question": "Est-ce qu'il maitrise le souffle de l'eau ?", "cle": "eau", "poids": 0.4},
+    {"question": "Est-ce qu'il maitrise le souffle du feu ?", "cle": "feu", "poids": 0.4},
+    {"question": "Est-ce qu'il a un serpent ?", "cle": "serpent", "poids": 0.3},
+    {"question": "Est-ce qu'il porte un masque ?", "cle": "masque", "poids": 0.3},
+    {"question": "Est-ce que c'est le chef des démons ?", "cle": "chef", "poids": 0.3},
+    {"question": "Est-ce qu'il a des yeux dans les tons pastel arc-en-ciel ?", "cle": "arc-en-ciel", "poids": 0.2},
+    {"question": "Est-ce que son pouvoir est lié à des poissons et des pots ?", "cle": "poisson", "poids": 0.2},
 ]
+
+# Optionnel : Trier les questions par ordre de poids décroissant
+questions.sort(key=lambda q: q["poids"], reverse=True)
