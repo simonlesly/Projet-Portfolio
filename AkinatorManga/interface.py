@@ -85,27 +85,26 @@ class GameApp:
             else:
                 self.end_game()
 
-
     def handle_yes(self):
         """Lorsque l'utilisateur clique sur 'Oui'."""
-        characteristic = self.game_logic.get_next_question()
-        if characteristic:
-            self.game_logic.process_answer(characteristic[1], "oui")
-            self.display_next_question()
+        next_question = self.game_logic.choose_best_question()  # Récupérer la prochaine question
+        if next_question:
+            self.game_logic.process_answer(next_question[1], "oui")  # Process la réponse et filtre les personnages
+            self.display_next_question()  # Afficher la question suivante
 
     def handle_no(self):
         """Lorsque l'utilisateur clique sur 'Non'."""
-        characteristic = self.game_logic.get_next_question()
-        if characteristic:
-            self.game_logic.process_answer(characteristic[1], "non")
-            self.display_next_question()
+        next_question = self.game_logic.choose_best_question()  # Récupérer la prochaine question
+        if next_question:
+            self.game_logic.process_answer(next_question[1], "non")  # Process la réponse et filtre les personnages
+            self.display_next_question()  # Afficher la question suivante
 
     def end_game(self):
         """Lorsque le jeu est terminé et qu'un personnage a été trouvé."""
         character = self.game_logic.get_final_answer()
 
         if character:
-            self.question_label.config(text=f"J'ai deviné ! C'est {character}!")
+            self.question_label.config(text=f"J'ai deviné ! C'est {character}! ")
             try:
                 self.character_image = Image.open(f"images/{character}.png")  # Assurez-vous d'avoir une image pour chaque personnage
                 self.character_image = self.character_image.resize((300, 300), Image.Resampling.LANCZOS)
