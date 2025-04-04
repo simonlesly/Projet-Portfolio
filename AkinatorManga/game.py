@@ -37,26 +37,17 @@ class GameLogic:
         return entropy_before - entropy_after
 
     def choose_best_question(self):
-        """Choisit la question avec le gain d'information le plus élevé."""
         if len(self.possible_answers) <= 1:
             return None
 
-        best_question = None
-        max_info_gain = -1
+        # Trier les questions par poids décroissant
+        sorted_questions = sorted([q for q in self.questions if q['cle'] not in self.asked_questions], key=lambda x: x['poids'], reverse=True)
 
-        for q in self.questions:
-            attribute = q['cle']
-            if attribute in self.asked_questions:
-                continue
-
-            info_gain = self.calculate_information_gain(self.possible_answers, attribute)
-
-            if info_gain > max_info_gain:
-                max_info_gain = info_gain
-                best_question = q
-
-        return best_question
-
+        # Retourner la première question (avec le poids le plus élevé)
+        if sorted_questions:
+            return sorted_questions[0]
+        return None
+    
     def process_answer(self, characteristic, answer):
         """Filtre les personnages en fonction de la réponse de l'utilisateur."""
         if answer == "oui":
