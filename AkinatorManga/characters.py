@@ -1,25 +1,25 @@
 # Liste de personnages et leurs caractéristiques
 characters = {
     #Homme et hummain
-    "Tanjiro": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir": False,"famille":True,"eau":True,"masque":False,"image": "images/tanjiro.png"},
-    "Sabito": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir": False,"famille":True,"eau":True,"masque":True},
-    "Inosuke": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"cheveux_noir": True,"famille":False},
-    "Murata": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir": True,"famille":False,"eau":True},
-    "Zenistu": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir": False,"famille":False},
-    "Genya": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir": True,"famille":True,"arme":True},
-    "Kagaya": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir":True,"famille":False,"adulte":True},
-    "Urokodaki": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir":False,"famille":False,"adulte":True,"arme":False,"eau":True},
-    "Jigoro": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir":False,"famille":False,"adulte":True,"arme":False,"eau":False},
-    "Yoriichi": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False, "cheveux_noir": False,"famille":True,"adulte":True},
+    "Tanjiro": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": False,"famille":True,"eau":True,"masque":False,"image": "images/tanjiro.png"},
+    "Sabito": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": False,"famille":True,"eau":True,"masque":True},
+    "Inosuke": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False,"cheveux_noir": True,"famille":False},
+    "Murata": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": True,"famille":False,"eau":True},
+    "Zenistu": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": False,"famille":False},
+    "Genya": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": True,"famille":True,"arme":True},
+    "Kagaya": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir":True,"famille":False,"adulte":True},
+    "Urokodaki": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir":False,"famille":False,"adulte":True,"arme":False,"eau":True},
+    "Jigoro": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir":False,"famille":False,"adulte":True,"arme":False,"eau":False},
+    "Yoriichi": {"homme": True,"humain": True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": False,"famille":True,"adulte":True},
     "Haganezuka": {"homme": True,"humain": True, "pouvoirs": False},
     
     "Giyuu": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "supérieur": False, "cheveux_noir": True, "adulte":True,"eau":True},
-    "Sanemi": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir": False,"famille":True,"adulte":True,"arme":False,"eau":False,"feu":False},
-    "Tengen": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir": False,"famille":False},
-    "Muichiro": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir": True, "adulte":False},
-    "Gyomei": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir":True, "adulte":True,"eau":False,"serpent":False},
-    "Obanai": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir": True, "adulte":True,"eau":False,"serpent":True},
-    "Rengoku": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir":False,"famille":True,"adulte":True,"arme":False,"eau":False,"feu":True},
+    "Sanemi": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir": False,"famille":True,"adulte":True,"arme":False,"eau":False,"feu":False},
+    "Tengen": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir": False,"famille":False},
+    "Muichiro": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir": True,"famille":True, "adulte":False},
+    "Gyomei": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir":True, "adulte":True,"eau":False,"serpent":False},
+    "Obanai": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True, "supérieur":False,"cheveux_noir": True, "adulte":True,"eau":False,"serpent":True},
+    "Rengoku": {"homme": True,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir":False,"famille":True,"adulte":True,"arme":False,"eau":False,"feu":True},
     
     
     
@@ -40,18 +40,18 @@ characters = {
     
     
     #Femme et humaine
-    "Aoi": {"homme": False,"humain":  True, "pouvoirs": False, "pillier": False, "cheveux_noir": True,"famille":False},
-    "Les triplette du domaine des papillons": {"homme": False,"humain":  True, "pouvoirs": False, "pillier": False, "cheveux_noir": True,"famille":True},
-    "Kanao": {"homme": False,"humain":  True, "pouvoirs": True, "pillier": False, "cheveux_noir": True,"famille":False},
-    "Makomo": {"homme": False,"humain":  True, "pouvoirs": True, "pillier": False, "cheveux_noir": True,"famille":True,"adulte":False},
-    "Kanae": {"homme": False,"humain":  True, "pouvoirs": True, "pillier": False, "cheveux_noir": True,"famille":True,"adulte":True},
-    "Shinobu": {"homme": False,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir": True},
-    "Misturi": {"homme": False,"humain": True, "pouvoirs": True, "pillier": True, "cheveux_noir": False},
+    "Aoi": {"homme": False,"humain":  True, "pouvoirs": False, "pillier": False,"supérieur":False, "cheveux_noir": True,"famille":False},
+    "Les triplette du domaine des papillons": {"homme": False,"humain":  True,"supérieur":False, "pouvoirs": False, "pillier": False, "cheveux_noir": True,"famille":True},
+    "Kanao": {"homme": False,"humain":  True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": True,"famille":False},
+    "Makomo": {"homme": False,"humain":  True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": True,"famille":True,"adulte":False},
+    "Kanae": {"homme": False,"humain":  True, "pouvoirs": True, "pillier": False,"supérieur":False, "cheveux_noir": True,"famille":True,"adulte":True},
+    "Shinobu": {"homme": False,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir": True},
+    "Misturi": {"homme": False,"humain": True, "pouvoirs": True, "pillier": True,"supérieur":False, "cheveux_noir": False},
     
     #Femme et démon
-    "Nezuko": {"homme": False,"humain": False, "pouvoirs": True, "supérieur":False,"cheveux_noir": True,"famille":True},
-    "Tamayo": {"homme": False,"humain": False, "pouvoirs": True, "supérieur":False,"cheveux_noir": True,"famille":False,"adulte":True},
-    "Susamaru": {"homme": False,"humain": False, "pouvoirs": True, "supérieur":False,"cheveux_noir": True,"famille":False,"adulte":False},
-    "Daki": {"homme": False,"humain": False, "pouvoirs": True, "supérieur":False,"cheveux_noir": False},
-    "Nakime": {"homme": False,"humain": False, "pouvoirs": True, "supérieur":True}
+    "Nezuko": {"homme": False,"humain": False, "pouvoirs": True,"pillier": False, "supérieur":False,"cheveux_noir": True,"famille":True},
+    "Tamayo": {"homme": False,"humain": False, "pouvoirs": True,"pillier": False, "supérieur":False,"cheveux_noir": True,"famille":False,"adulte":True},
+    "Susamaru": {"homme": False,"humain": False, "pouvoirs": True,"pillier": False, "supérieur":False,"cheveux_noir": True,"famille":False,"adulte":False},
+    "Daki": {"homme": False,"humain": False, "pouvoirs": True,"pillier": False, "supérieur":False,"cheveux_noir": False},
+    "Nakime": {"homme": False,"humain": False, "pouvoirs": True,"pillier": False, "supérieur":True,"cheveux_noir": True}
 }
