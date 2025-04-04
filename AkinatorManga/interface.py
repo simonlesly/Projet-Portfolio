@@ -75,15 +75,15 @@ class GameApp:
         self.no_button.pack(side="right", padx=40)
 
     def display_next_question(self):
-    """Affiche la meilleure question choisie dynamiquement."""
-    if self.game_logic.is_game_finished():
-        self.end_game()
-    else:
-        next_question = self.game_logic.choose_best_question()
-        if next_question:
-            self.question_label.config(text=next_question[0])
-        else:
+        """Affiche la meilleure question choisie dynamiquement."""
+        if self.game_logic.is_game_finished():
             self.end_game()
+        else:
+            next_question = self.game_logic.choose_best_question()
+            if next_question:
+                self.question_label.config(text=next_question[0])
+            else:
+                self.end_game()
 
 
     def handle_yes(self):
