@@ -1,30 +1,39 @@
-from characters import characters
-from questions import questions
+from collections import Counter
 
 class GameLogic:
     def __init__(self):
         self.possible_answers = list(characters.keys())
-        self.asked_questions = []  # Liste des questions déjà posées
-        self.current_question_index = 0  # Indice de la question actuelle
+        self.asked_questions = []
 
-    def get_next_question(self):
-        if self.current_question_index < len(questions):
-            return questions[self.current_question_index]
-        return None
+    def choose_best_question(self):
+        """Choisit la meilleure question pour diviser les personnages restants en deux groupes équilibrés."""
+        best_question = None
+        best_score = float('inf')
+
+        for question, key in questions:
+            if key in self.asked_questions:
+                continue  # Ne pas reposer la même question
+
+            # Compter combien de personnages répondent "oui" ou "non"
+            count_yes = sum(1 for p in self.possible_answers if characters[p].get(key, False))
+            count_no = len(self.possible_answers) - count_yes
+            score = abs(count_yes - count_no)  # Équilibre entre les groupes
+
+            if score < best_score:
+                best_score = score
+                best_question = (question, key)
+
+        return best_question
 
     def process_answer(self, characteristic, answer):
-        # Réduit la liste des personnages en fonction de la réponse
+        """Filtre les personnages en fonction de la réponse de l'utilisateur."""
         if answer == "oui":
             self.possible_answers = [p for p in self.possible_answers if characters[p].get(characteristic, False)]
         else:
             self.possible_answers = [p for p in self.possible_answers if not characters[p].get(characteristic, False)]
 
-        self.current_question_index += 1  # Passe à la question suivante
-
-    def is_game_finished(self):
-        return len(self.possible_answers) == 1
+        self.asked_questions.append(characteristic)
 
     def get_final_answer(self):
-        if len(self.possible_answers) == 1:
-            return self.possible_answers[0]
-        return None
+        """Retourne le personnage deviné."""
+        return self.possible_answers[0] if len(self.possible_answers) == 1 else None
